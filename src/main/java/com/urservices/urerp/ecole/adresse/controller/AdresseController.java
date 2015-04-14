@@ -5,7 +5,7 @@
  */
 package com.urservices.urerp.ecole.adresse.controller;
 
-import com.urservices.urerp.ecole.adresse.entity.Adresse;
+import com.urservices.urerp.ecole.entity.Adresse;
 import com.urservices.urerp.ecole.adresse.service.IServiceAdresse;
 import java.util.List;
 import javax.validation.Valid;

@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = {
-        "com.urservices.urerp.ecole.adresse.repository"
+        "com.urservices.urerp.ecole.repository"
         })
 public class PersistenceJPAConfig {
     
@@ -37,7 +37,7 @@ public class PersistenceJPAConfig {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
         em.setPackagesToScan(new String[] {
-            "com.urservices.urerp.ecole.adresse.entity",
+            "com.urservices.urerp.ecole.entity",
         });
         
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
@@ -54,7 +54,7 @@ public class PersistenceJPAConfig {
         //Chemin d'acces a la base de donnees
         dataSource.setUrl("jdbc:mysql://localhost:3306/ecole");
         dataSource.setUsername("root");
-        dataSource.setPassword("");
+        dataSource.setPassword("elise");
         return dataSource;
     }
     
@@ -74,7 +74,7 @@ public class PersistenceJPAConfig {
     Properties additionalProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", "update");
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MYSQL5Dialect");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
 }

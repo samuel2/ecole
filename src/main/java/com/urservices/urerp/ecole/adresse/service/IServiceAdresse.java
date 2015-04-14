@@ -5,7 +5,7 @@
  */
 package com.urservices.urerp.ecole.adresse.service;
 
-import com.urservices.urerp.ecole.adresse.entity.Adresse;
+import com.urservices.urerp.ecole.entity.Adresse;
 import java.util.List;
 
 /**

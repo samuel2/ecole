@@ -6,8 +6,8 @@
 package com.urservices.urerp.ecole.adresse.service;
 
 import com.google.common.collect.Lists;
-import com.urservices.urerp.ecole.adresse.entity.Adresse;
-import com.urservices.urerp.ecole.adresse.repository.AdresseRepository;
+import com.urservices.urerp.ecole.entity.Adresse;
+import com.urservices.urerp.ecole.repository.AdresseRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

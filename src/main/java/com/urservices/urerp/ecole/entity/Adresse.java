@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.urservices.urerp.ecole.adresse.entity;
+package com.urservices.urerp.ecole.entity;
 
-import com.urservices.urerp.ecole.entity.AbstractEntity;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -17,8 +16,6 @@ import org.hibernate.validator.constraints.Email;
  */
 @Entity
 public class Adresse extends AbstractEntity{
-    
-    private static final long serialVersionUID = 789654152369874568L;
     
     @NotNull
     @Size(min = 9, max = 9)

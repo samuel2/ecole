@@ -8,9 +8,10 @@ package com.urservices.urerp.ecole.entity;
 import java.io.Serializable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Version;
+import javax.persistence.Version;
+
 
 /**
  *
@@ -23,11 +24,20 @@ public abstract class AbstractEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    protected Long id;
 
     @Version
-    private Long version;
+    protected Long version;
 
+    public AbstractEntity() {
+    }
+
+    public AbstractEntity(Long id, Long version) {
+        this.id = id;
+        this.version = version;
+    }
+    
+    
     public Long getId() {
         return id;
     }
